@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "frontend/build"  # Update with the correct build folder path
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+from = "/api/*"
+to = "http://localhost:4000/api/:splat"
+
